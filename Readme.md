@@ -7,10 +7,32 @@ This is a sample Java / Maven / Spring Boot (version 2.6.4) application for a de
 * Clone this repository
 * Make sure you are using JDK 11 
 
+## Create an application.properties file in a folder like C:\Dev\application.properties
+
+    C:\Dev\application.properties
+    
+    ```
+    application.data.import.folder=file:///C:/Dev/exchangeratesdata/
+    server.error.include-message=always
+    ```
+## Create a exchangeratesdata folder including csv files like C:\Dev\exchangeratesdata
+    
+    C:\Dev\application.properties
+    C:\Dev\exchangeratesdata
+                           |_CHFUSD.csv
+                           |_CNYUSD.csv
+                           |_JPYUSD.csv
+                           |_KRWUSD.csv
+                           |_NOKUSD.csv
+                           |_SEKUSD.csv
+                           |_THBUSD.csv
+                           |_TWDUSD.csv
+
+## Run with java -jar
 ```
-        java -jar target/currencyexchanges-0.0.1-SNAPSHOT.jar 
+        java -jar .\target\currencyexchanges-0.0.1-SNAPSHOT.jar --spring.config.location="C:\Dev\"
 or
-        mvn spring-boot:run
+        mvn spring-boot:run --spring.config.location="C:\Dev\"
 ```
 
 ## About the Service
