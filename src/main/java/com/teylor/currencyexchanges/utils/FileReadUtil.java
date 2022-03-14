@@ -17,6 +17,7 @@ public class FileReadUtil {
 
     public List<File> getAllFilesFromResource(String folder)
             throws URISyntaxException, IOException {
+        System.out.println("********************Source folder***********:"+folder);
         ClassLoader classLoader = getClass().getClassLoader();
         URL resource = classLoader.getResource(folder);
         // dun walk the root path, we will walk all the classes
